@@ -1,0 +1,2 @@
+#/bin/bash
+aws ce get-cost-and-usage --time-period Start=`date +"%Y-%m-01"`,End=`date +"%Y-%m-%d"` --granularity MONTHLY --metrics "BlendedCost" | awk '{print $2}' | tail -1
